@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using Contract.Models;
 
-namespace DataAccess.Demo
+namespace DataAccess.SPA
 {
     public class SPADataContext : DbContext
     {

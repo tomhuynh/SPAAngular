@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Contract.Facades;
-using Contract.Models;
-using DataAccess.Demo;
+using DataAccess.SPA;
 
-namespace Business.Facade.Demo
+namespace Business.Facade.Alert
 {
     public class AlertFacade : IAlertFacade, IDisposable
     {
@@ -19,7 +17,7 @@ namespace Business.Facade.Demo
         }
 
 
-        public async Task<List<Alert>> GetAlertsAsync()
+        public async Task<List<Contract.Models.Alert>> GetAlertsAsync()
         {
             return (await _demoDataAccess.GetAlertsAsync()).ToList();
 

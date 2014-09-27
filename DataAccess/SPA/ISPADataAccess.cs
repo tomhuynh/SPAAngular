@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Contract.Models;
 
-namespace DataAccess.Demo
+namespace DataAccess.SPA
 {
     public interface ISPADataAccess : IDisposable
     {

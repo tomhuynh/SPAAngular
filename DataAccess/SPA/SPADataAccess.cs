@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using Contract.Models;
-using System.Configuration;
 
-namespace DataAccess.Demo
+namespace DataAccess.SPA
 {
     public class SPADataAccess: ISPADataAccess
     {
