@@ -1,18 +1,19 @@
 ﻿<div ng-app="app">
     <div ng-controller='DemoCtrl'>
-        <div class="alert alert-info">
-            This is inside demo home spa page.
-        </div>
 
-        <!-- sample 0: routing from Index to here-->
-        <!--{{alerts}}-->
-        <br />
-        <!-- sample 1: 2 ways binding-->
-        <!--<input type="text" ng-model="myText">{{myText}} <br />
-        <br />-->
+        <label class="alert alert-warning"> Sample 1: Routing (client) from index to here. If you see this text, the routing from index to here is succeeded. </label>
+        <hr />
 
-        <!-- sample 2: ngrepeat-->
-        <!--<table class="table table-striped table-hover table-fixed">
+        <label class="alert alert-info"> Sample 2: JSON data return from web api call: </label> <br />
+        {{alerts}}
+        <hr />
+
+        <label class="alert alert-info"> Sample 3: 2 ways binding: </label>
+        <input type="text" ng-model="myText">{{myText}} <br />
+        <hr />
+
+        <label class="alert alert-info"> Sample 4: Using ng-repeat directive: </label>
+        <table class="table table-striped table-hover table-fixed">
             <thead class="table-header">
                 <tr>
                     <th>Index</th>
@@ -33,9 +34,11 @@
                     <td>{{alert.CreatedOn}}</td>
                 </tr>
             </tbody>
-        </table>-->
-        <!-- sample 3-->
-        <!--<table class="table table-striped table-hover table-fixed">
+        </table>
+        <hr />
+
+        <label class="alert alert-info"> Sample 5: Using ng-if directive: </label>
+        <table class="table table-striped table-hover table-fixed">
             <thead class="table-header">
                 <tr>
                     <th>Id</th>
@@ -46,7 +49,7 @@
                 </tr>
             </thead>
             <tbody ng-repeat="alert in alerts track by $index">
-                <tr ng-if ="alert.Id <= 2">
+                <tr ng-if="alert.Id <= 2">
                     <td>{{alert.Id}}</td>
                     <td>{{alert.Description}}</td>
                     <td>{{alert.Reason}}</td>
@@ -54,55 +57,58 @@
                     <td>{{alert.CreatedOn}}</td>
                 </tr>
             </tbody>
-        </table>-->
-        <!-- sample 4 ngclick-->
-        <!--<input type='button' ng-model='hideRows'value="Toggle Visibility" ng-click="hideRow()"/>
-            <table class="table table-striped table-hover table-fixed">
-                <thead class="table-header">
-                    <tr>
-                        <th>Id</th>
-                        <th>Description</th>
-                        <th>Reason</th>
-                        <th>Created By</th>
-                        <th>Created On</th>
-                    </tr>
-                </thead>
-                <tbody ng-repeat="alert in alerts track by $index">
-                    <tr ng-show="!hideRows">
-                        <td>{{alert.Id}}</td>
-                        <td>{{alert.Description}}</td>
-                        <td>{{alert.Reason}}</td>
-                        <td>{{alert.CreatedBy}}</td>
-                        <td>{{alert.CreatedOn}}</td>
-                    </tr>
-                </tbody>
-            </table>-->
-        
-        <!-- sample 5 ng-option watch -->        
-        <!--<label class="alert alert-warning"> Select the value:</label>
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="form-group tab">
-                        <select class="form-control"
-                                id="sample5"
-                                name="sample5"
-                                ng-model="myalert.Id"
-                                ng-options="alert.Id as alert.Description for alert in alerts">                        
-                        </select>
-                    </div>
-                </div>
-            </div>-->
+        </table>
 
-        <!-- sample 6 custome directive-->
+        <label class="alert alert-info"> Sample 6: Using ng-click directive: </label> <br />
+        <input type='button' ng-model='hideRows' value="Toggle Visibility" ng-click="hideRow()" />
+        <table class="table table-striped table-hover table-fixed">
+            <thead class="table-header">
+                <tr>
+                    <th>Id</th>
+                    <th>Description</th>
+                    <th>Reason</th>
+                    <th>Created By</th>
+                    <th>Created On</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="alert in alerts track by $index">
+                <tr ng-show="!hideRows">
+                    <td>{{alert.Id}}</td>
+                    <td>{{alert.Description}}</td>
+                    <td>{{alert.Reason}}</td>
+                    <td>{{alert.CreatedBy}}</td>
+                    <td>{{alert.CreatedOn}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+
+        <label class="alert alert-info"> Sample 7: Using $watch: </label><br />
+        <label class="alert {{type}}"> Select the value:</label>
         <div class="row">
-            <div ng-repeat="alert in alerts">                
+            <div class="col-md-2">
+                <div class="form-group tab">
+                    <select class="form-control"
+                            id="sample7"
+                            name="sample7"
+                            ng-model="myalert.Id"
+                            ng-options="alert.Id as alert.Description for alert in alerts"></select>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <label class="alert alert-info"> Sample 8: Using custome directive: </label>
+        <div class="row">
+            <div ng-repeat="alert in alerts">
                 <myalert type="{{alert.Description}}" reason="alert.Reason" close="closeAlert($index)">
                     {{alert.Description}}
                 </myalert>
             </div>
         </div>
-        
-        <!-- and more...-->
+        <hr />
+
+        <!-- please add any more angular features to share...-->
 
     </div>
 </div>

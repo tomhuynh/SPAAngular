@@ -211,6 +211,9 @@
     <Content Include="css\site.css">
       <DependentUpon>site.less</DependentUpon>
     </Content>
+    <Content Include="Documents\2wayBinding.png" />
+    <Content Include="Documents\MVCVersusAngularPattern.png" />
+    <Content Include="Documents\readme.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -220,6 +223,9 @@
     <Content Include="Scripts\angular\alert\alertCtrl.js">
       <DependentUpon>alertCtrl.coffee</DependentUpon>
     </Content>
+    <Content Include="Scripts\angular\Binding\Angular.html" />
+    <Content Include="Scripts\angular\Binding\Javascript.html" />
+    <Content Include="Scripts\angular\Binding\Jquery.html" />
     <Content Include="Scripts\angular\common\routes.js">
       <DependentUpon>routes.coffee</DependentUpon>
     </Content>
@@ -260,6 +266,8 @@
     </Content>
     <Content Include="css\site.less" />
     <Content Include="Scripts\angular\alert\my-alert.coffee" />
+    <Content Include="Documents\SPA.bak" />
+    <Content Include="Documents\AngularJS For Net Developers.pdf" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
