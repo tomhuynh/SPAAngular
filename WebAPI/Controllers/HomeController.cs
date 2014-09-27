@@ -10,11 +10,11 @@ namespace WebAPI.Controllers
 {
     public class HomeController : ApiController
     {
-        private readonly IAlertFacade _demoFacade;
+        private readonly IAlertFacade _alertFacade;
 
         public HomeController()
         {
-            _demoFacade = new AlertFacade();
+            _alertFacade = new AlertFacade();
         }
 
 
@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         {
             try
             {
-                return _demoFacade.GetAlertsAsync();
+                return _alertFacade.GetAlertsAsync();
 
             }
             catch (Exception e)
