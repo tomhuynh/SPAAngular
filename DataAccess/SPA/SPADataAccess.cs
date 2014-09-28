@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using Contract.Models;
 
@@ -22,16 +24,15 @@ namespace DataAccess.SPA
         {
             //Fix EF bugs which regards to message: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
             _dependency = typeof(System.Data.Entity.SqlServer.SqlProviderServices);
-            _spaConnectionString = "Data Source=OMANEL705\\TOM;Initial Catalog=SPA;Integrated Security=True";
+            _spaConnectionString = ConfigurationManager.ConnectionStrings["SPAConnection"].ConnectionString;            
             DataContext = new SPADataContext(_spaConnectionString);
         }
 
-        public async Task<List<Alert>> GetAlertsAsync()
+        public Task<List<Alert>> GetAlertsAsync()
         {
             try
             {
-                var ret = await DataContext.Alerts.ToListAsync();
-                return ret;
+                return DataContext.Alerts.ToListAsync();
             }
             catch (Exception e)
             {

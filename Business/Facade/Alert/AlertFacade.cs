@@ -16,15 +16,10 @@ namespace Business.Facade.Alert
             _spaDataAccess = new SPADataAccess();
         }
 
-
-        public async Task<List<Contract.Models.Alert>> GetAlertsAsync()
+        public Task<List<Contract.Models.Alert>> GetAlertsAsync()
         {
-            return (await _spaDataAccess.GetAlertsAsync()).ToList();
-
+            return _spaDataAccess.GetAlertsAsync();
         }
-
-
-
 
         #region IDisposable Members
 

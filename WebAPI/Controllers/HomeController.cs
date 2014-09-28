@@ -24,7 +24,6 @@ namespace WebAPI.Controllers
             try
             {
                 return _alertFacade.GetAlertsAsync();
-
             }
             catch (Exception e)
             {
