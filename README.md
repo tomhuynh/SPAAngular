@@ -10,7 +10,7 @@ It is a complete Angular SPA (Single Page Application) using Visual Studio from 
 2. Set up:
 a. Pull the code from repository
 b. Restore the backup database (SPA.bak) under \SPA\Documents to your database
-c. Change the connection string to point to your restore database
+c. Change the connection string (in WebAP\Web.config) to point to your restored database
 
 3. Please welcome to add more features of AngularJS that you think it is cool and you want to share.
 4. Copyright: Free
