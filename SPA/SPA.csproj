@@ -258,7 +258,6 @@
     </Content>
     <Content Include="css\site.less" />
     <Content Include="Scripts\angular\alert\my-alert.coffee" />
-    <Content Include="Documents\SPA.bak" />
     <Content Include="Documents\AngularJS For Net Developers.pdf" />
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +270,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="Documents\SPA.zip" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\angular\alert\alertCtrl.coffee" />
     <Content Include="Scripts\angular\alert\alert-service.coffee" />
